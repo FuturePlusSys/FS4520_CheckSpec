@@ -1,0 +1,2 @@
+C:\Users\PaulS\Documents\ProbeManagers\FS4500\CTS_MainLink\FPSTests\ContentTests\ContentValidation\obj\Debug\ContentValidation.csprojAssemblyReference.cache
+C:\Users\PaulS\Documents\ProbeManagers\FS4500\CTS_MainLink\FPSTests\ContentTests\ContentValidation\obj\Debug\ContentValidation.csproj.CoreCompileInputs.cache
