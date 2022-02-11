@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FS4500_StateDataContent>
+    
+    <!-- Field definitions assumes 16 consecutive bytes per state; StateData[0:15] -->
+    <!-- Offset is the number of bits from the left the left most bit of the 16 byte array (byte[0] bit 7 is offset 0.-->
+    <!-- Width is the number of consecutive bits in the field -->
+    <!-- All fields are assumed to be consecutive bits.-->
+    <StateDataFields ByteLength="16">
+      <StateField Name="Any_Err" Offset="0" Width="1"/>
+      <StateField Name="Trigger" Offset="12" Width="1"/>
+      <StateField Name="Time_Count" Offset="13" Width="50"/>
+      <StateField Name="Error" Offset="63" Width="3"/>
+      <StateField Name="Event" Offset="70" Width="8"/>
+      <StateField Name="LN0_INV" Offset="88" Width="1"/>
+      <StateField Name="LN0_K" Offset="89" Width="1"/>
+      <StateField Name="LN0_DATA" Offset="90" Width="8"/>
+      <StateField Name="LN1_INV" Offset="97" Width="1"/>
+      <StateField Name="LN1_K" Offset="98" Width="1"/>
+      <StateField Name="LN1_DATA" Offset="99" Width="8"/>
+      <StateField Name="LN2_INV" Offset="108" Width="1"/>
+      <StateField Name="LN2_K" Offset="109" Width="1"/>
+      <StateField Name="LN2_DATA" Offset="110" Width="8"/>
+      <StateField Name="LN3_INV" Offset="118" Width="1"/>
+      <StateField Name="LN3_K" Offset="119" Width="1"/>
+      <StateField Name="LN3_DATA" Offset="120" Width="8"/>
+    </StateDataFields>
+  
+    <EventCodes>
+      <ProtocolID ID="SST">
+        <EventCode Name="F0 Pixel" Value="88"></EventCode>
+        <EventCode Name="F1 Pixel" Value="C8"></EventCode>
+        <EventCode Name="F0 Compressed Pixel" Value="8D"></EventCode>
+        <EventCode Name="F1 Compressed Pixel" Value="CD"></EventCode>
+        <EventCode Name="F0 EOC" Value="8E"></EventCode>
+        <EventCode Name="F1 EOC" Value="CE"></EventCode>
+        <EventCode Name="F0 Stuff" Value="D0"></EventCode>
+        <EventCode Name="F1 Stuff" Value="90"></EventCode>
+        <EventCode Name="Vert. Content Protection BS" Value="68"></EventCode>
+        <EventCode Name="Vert. Content Protection SR" Value="60"></EventCode>
+        <EventCode Name="Hor. Content Protection BS" Value="28"></EventCode>
+        <EventCode Name="Hor. Content Protection SR" Value="20"></EventCode>
+        <EventCode Name="Vert. BS" Value="4A"></EventCode>
+        <EventCode Name="Hor. BS" Value ="0A"></EventCode>
+        <EventCode Name="Vert. SR" Value="4B"></EventCode>
+        <EventCode Name="Hor. SR" Value="0B"></EventCode>
+        <EventCode Name="Vert BE" Value="55"></EventCode>
+        <EventCode Name="Hor BE" Value ="15"></EventCode>
+        <EventCode Name="TPS1" Value ="01"></EventCode>
+        <EventCode Name="TPS2" Value ="02"></EventCode>
+        <EventCode Name="TPS3" Value ="03"></EventCode>
+        <EventCode Name="TPS4" Value ="04"></EventCode>
+        <EventCode Name="Vert. VBID" Value ="49"></EventCode>
+        <EventCode Name="Hor. VBID" Value ="09"></EventCode>
+        <EventCode Name="Vert. MVID" Value ="4C"></EventCode>
+        <EventCode Name="Hor. MVID" Value ="0C"></EventCode>
+        <EventCode Name="Vert. MAUD" Value ="51"></EventCode>
+        <EventCode Name="Hor. MAUD" Value ="11"></EventCode>
+        <EventCode Name="Vert. Ordered Set Sleep" Value="55"></EventCode>
+        <EventCode Name="Hor. Ordered Set Sleep" Value="15"></EventCode>
+        <EventCode Name="Vert. Ordered Set Standby" Value="5B"></EventCode>
+        <EventCode Name="Hor. Ordered Set Standby" Value="1B"></EventCode>
+        <EventCode Name="Vert. Audio Stream SDP" Value="60"></EventCode>
+        <EventCode Name="Hor. Audio Stream SDP" Value="20"></EventCode>
+        <EventCode Name="Vert. Audio TS SDP" Value="64"></EventCode>
+        <EventCode Name="Hor. Audio TS SDP" Value="24"></EventCode>
+        <EventCode Name="Vert. Audio Copy Mgmt SDP" Value="6B"></EventCode>
+        <EventCode Name="Hor. Audio Copy Mgmt SDP" Value="4B"></EventCode>
+        <EventCode Name="Vert. ISRC SDP" Value="72"></EventCode>
+        <EventCode Name="Hor. ISRC SDP" Value="32"></EventCode>
+        <EventCode Name="Vert. VSC SDP" Value="52"></EventCode>
+        <EventCode Name="Hor. VSC SDP" Value="12"></EventCode>
+        <EventCode Name="Vert. Extension SDP" Value="7C"></EventCode>
+        <EventCode Name="Hor. Extension SDP" Value="3C"></EventCode>
+        <EventCode Name="Vert. Info Frame SDP" Value="54"></EventCode>
+        <EventCode Name="Hor. Info Frame SDP" Value="14"></EventCode>
+        <EventCode Name="Vert. Camera SDP" Value="69"></EventCode>
+        <EventCode Name="Hor. Camera SDP" Value="29"></EventCode>
+        <EventCode Name="Vert. PPS SDP" Value="61"></EventCode>
+        <EventCode Name="Hor. PPS SDP" Value="21"></EventCode>
+        <EventCode Name="Vert. VCS EXT VESA SDP" Value="62"></EventCode>
+        <EventCode Name="Hor. VCS EXT VESA SDP" Value="22"></EventCode>
+        <EventCode Name="Vert. VCS EXT CEA SDP" Value="65"></EventCode>
+        <EventCode Name="Hor. VCS EXT CEA SDP" Value="25"></EventCode>
+        <EventCode Name="FEC PM " Value="34"></EventCode>
+        <EventCode Name="FEC PH" Value="35"></EventCode>
+        <EventCode Name="FEC Enabled Ordered Set" Value="36"></EventCode>
+        <EventCode Name="FEC Disabled Ordered Set" Value="37"></EventCode>
+      </ProtocolID>
+      <ProtocolID ID="MST">
+        <EventCode Name="F0 Pixel" Value="88"></EventCode>
+        <EventCode Name="F1 Pixel" Value="C8"></EventCode>
+        <EventCode Name="Vert. BS" Value="4A"></EventCode>
+        <EventCode Name="Hor. BS" Value ="0A"></EventCode>
+        <EventCode Name="Vert BE" Value="0x55"></EventCode>
+        <EventCode Name="Hor BE" Value ="0x15"></EventCode>  
+        <EventCode Name="Vert. VBID" Value ="49"></EventCode>
+        <EventCode Name="Hor. VBID" Value ="09"></EventCode>
+        <EventCode Name="Vert. MVID" Value ="4C"></EventCode>
+        <EventCode Name="Hor. MVID" Value ="0C"></EventCode>
+        <EventCode Name="Vert. MAUD" Value ="51"></EventCode>
+        <EventCode Name="Hor. MAUD" Value ="11"></EventCode>
+        <EventCode Name="Vert. MSA" Value ="5C"></EventCode>
+        <EventCode Name="Hor. MSA" Value ="1C"></EventCode>
+        <EventCode Name="Vert. Audio Stream SDP" Value="60"></EventCode>
+        <EventCode Name="Hor. Audio Stream SDP" Value="20"></EventCode>
+        <EventCode Name="Vert. Audio TS SDP" Value="64"></EventCode>
+        <EventCode Name="Hor. Audio TS SDP" Value="24"></EventCode>        
+        <EventCode Name="Vert. Audio Copy Mgmt SDP" Value="6B"></EventCode>
+        <EventCode Name="Hor. Audio Copy Mgmt SDP" Value="4B"></EventCode>        
+        <EventCode Name="Vert. ISRC SDP" Value="72"></EventCode>
+        <EventCode Name="Hor. ISRC SDP" Value="32"></EventCode>
+        <EventCode Name="Vert. VSC SDP" Value="52"></EventCode>
+        <EventCode Name="Hor. VSC SDP" Value="12"></EventCode>   
+        <EventCode Name="Vert. Extension SDP" Value="7C"></EventCode>
+        <EventCode Name="Hor. Extension SDP" Value="3C"></EventCode>
+        <EventCode Name="Vert. Info Frame SDP" Value="54"></EventCode>
+        <EventCode Name="Hor. Info Frame SDP" Value="14"></EventCode>
+        <EventCode Name="Vert. Camera SDP" Value="69"></EventCode>
+        <EventCode Name="Hor. Camera SDP" Value="29"></EventCode>        
+        <EventCode Name="Vert. PPS SDP" Value="61"></EventCode>
+        <EventCode Name="Hor. PPS SDP" Value="21"></EventCode>
+        <EventCode Name="Vert. VCS EXT VESA SDP" Value="62"></EventCode>
+        <EventCode Name="Hor. VCS EXT VESA SDP" Value="22"></EventCode>
+        <EventCode Name="Vert. VCS EXT CEA SDP" Value="65"></EventCode>
+        <EventCode Name="Hor. VCS EXT CEA SDP" Value="25"></EventCode>
+        <EventCode Name="Vert. Stream Fill SF" Value="73"></EventCode>
+        <EventCode Name="Hor. Stream Fill SF" Value="33"></EventCode>
+        <EventCode Name="Vert. Stream Fill SF during Video" Value="B3"></EventCode>
+        <EventCode Name="Hor. Stream Fill SF during Video" Value="F3"></EventCode>
+        <EventCode Name="Vert. VCPF/RG" Value="78"></EventCode>
+        <EventCode Name="Hor. VCPF/RG" Value="38"></EventCode>
+        <EventCode Name="VCPF/RG during Video" Value="F8"></EventCode>
+        <EventCode Name="VCPF/RG during Video" Value="B8"></EventCode>
+        <EventCode Name="Vert. SR" Value="0x0B"></EventCode>
+        <EventCode Name="TPS1" Value ="01"></EventCode>
+        <EventCode Name="TPS2" Value ="02"></EventCode>
+        <EventCode Name="TPS3" Value ="03"></EventCode>
+        <EventCode Name="TPS4" Value ="04"></EventCode>
+        <EventCode Name="MTP Header = 0" Value="3F"></EventCode>
+        <EventCode Name="MTP Header not = SR,0 or ACT" Value="34"></EventCode>
+        <EventCode Name="MTP Header not = ACT" Value="31"></EventCode>
+        <EventCode Name="Uncompressed VC" Value="07"></EventCode>
+      </ProtocolID>
+    </EventCodes>
+</FS4500_StateDataContent>
